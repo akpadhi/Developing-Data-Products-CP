@@ -1,0 +1,48 @@
+Shiny application - Exploring Iris Data Set
+========================================================
+
+author: romkhot
+
+
+See https://romkhot.shinyapps.io/Developing-Data-Products
+
+
+About the Iris Dataset
+========================================================
+
+The iris dataset has been used for classification in many research publications. It consists of 50
+samples from each of three classes of iris owers [Frank and Asuncion, 2010]. One class is linearly
+separable from the other two, while the latter are not linearly separable from each other. There
+are 5 attributes in the dataset:
+* sepal length in cm,
+*  sepal width in cm,
+*  petal length in cm,
+*  petal width in cm, and
+*  class: Iris Setosa, Iris Versicolour, and Iris Virginica.
+
+
+Iris Dataset - Quick summary
+========================================================
+```{r}
+head(iris)
+```
+
+```{r}
+summary(iris)
+```
+
+Iris Dataset - Scatter Plot
+========================================================
+
+```{r, echo=FALSE}
+i2 <- iris[iris$Species == "versicolor", ]
+plot(i2$Sepal.Width, i2$Sepal.Length)
+```
+
+Iris Dataset - Histogram for the versicolor
+===========================================================
+
+```{r, echo=FALSE}
+hist(i2$Sepal.Width)
+```
+
